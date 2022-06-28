@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono&family=Russo+One&family=Secular+One&family=Source+Code+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    background-color: whitesmoke;
+    transition: 0.5s ease-in;
+}
+
+.game{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+}
+
+.board{
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    font-family: 'Fredoka One';
+    font-size: 3rem;
+    line-height: 90px;
+}
+
+.cell{
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.cell.winner{
+    background-color: red;
+}
+
+.darkCell{
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    color: white;
+}
+
+.winCell{
+    display: none;
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(n+7){
+    border-bottom: none;
+}
+
+img{
+    width: 40%;
+    height: 30%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.menu{
+    margin-right: 30px;
+    margin-top: 50px;
+}
+
+.menu a{
+    font-family: 'Fredoka One';
+    font-size: 1.6rem;
+    margin-right: 20px;
+}
+
+.reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+}
+#btnr{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    font-family: 'Fredoka One';
+    font-size: 1.8rem;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    /*border: 3px solid black;*/
+    transition: 0.5s;
+}
+
+#btnr:hover{
+    transform: scale(0.90);
+}
+
+
+/* night mode button*/
+#btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#btn:hover{
+    transform: rotate(30deg);
+}
+
+/* page night mode */
+.dark{
+    background-color: #292C35;
+}
+
+.menuDark{
+    color: whitesmoke;
+}
+
+.titleDark{
+    color: black;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.resetDark{
+    border: 3px solid whitesmoke;
+    color: #fff;
+}
